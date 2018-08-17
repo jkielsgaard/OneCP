@@ -1,0 +1,17 @@
+c:\syncplicity\kiels00j\documents\visual studio 2015\Projects\OneCP\OneCP\bin\Debug\OneCP.exe.config
+c:\syncplicity\kiels00j\documents\visual studio 2015\Projects\OneCP\OneCP\bin\Debug\OneCP.exe
+c:\syncplicity\kiels00j\documents\visual studio 2015\Projects\OneCP\OneCP\bin\Debug\OneCP.pdb
+c:\syncplicity\kiels00j\documents\visual studio 2015\Projects\OneCP\OneCP\obj\Debug\OneCP.csprojResolveAssemblyReference.cache
+c:\syncplicity\kiels00j\documents\visual studio 2015\Projects\OneCP\OneCP\obj\Debug\MainWindow.g.cs
+c:\syncplicity\kiels00j\documents\visual studio 2015\Projects\OneCP\OneCP\obj\Debug\App.g.cs
+c:\syncplicity\kiels00j\documents\visual studio 2015\Projects\OneCP\OneCP\obj\Debug\OneCP_MarkupCompile.cache
+c:\syncplicity\kiels00j\documents\visual studio 2015\Projects\OneCP\OneCP\obj\Debug\OneCP_MarkupCompile.lref
+c:\syncplicity\kiels00j\documents\visual studio 2015\Projects\OneCP\OneCP\obj\Debug\App.baml
+c:\syncplicity\kiels00j\documents\visual studio 2015\Projects\OneCP\OneCP\obj\Debug\MainWindow.baml
+c:\syncplicity\kiels00j\documents\visual studio 2015\Projects\OneCP\OneCP\obj\Debug\OneCP.g.resources
+c:\syncplicity\kiels00j\documents\visual studio 2015\Projects\OneCP\OneCP\obj\Debug\OneCP.Properties.Resources.resources
+c:\syncplicity\kiels00j\documents\visual studio 2015\Projects\OneCP\OneCP\obj\Debug\OneCP.csproj.GenerateResource.Cache
+c:\syncplicity\kiels00j\documents\visual studio 2015\Projects\OneCP\OneCP\obj\Debug\OneCP.exe
+c:\syncplicity\kiels00j\documents\visual studio 2015\Projects\OneCP\OneCP\obj\Debug\OneCP.pdb
+c:\syncplicity\kiels00j\documents\visual studio 2015\Projects\OneCP\OneCP\obj\Debug\Settings.g.cs
+c:\syncplicity\kiels00j\documents\visual studio 2015\Projects\OneCP\OneCP\obj\Debug\Settings.baml
