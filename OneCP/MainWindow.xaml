@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OneCP"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="300" Background="#2E4372" Loaded="Window_Loaded" Icon="Icon/CopyPaste.ico">
+        Title="OneCP" Height="350" Width="600" Background="#0f084b" Loaded="Window_Loaded" Icon="Icon/CopyPaste.ico">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="5"/>
@@ -23,9 +23,8 @@
             <ColumnDefinition Width="5"/>
         </Grid.ColumnDefinitions>
 
-        <Button Name="btn_Send" Content="Send Clipboard" Grid.Column="1" Grid.Row="1" Click="btn_Send_Click" Style="{StaticResource FlatButtonStyle}"></Button>
-        <Button Name="btn_Refresh" Content="Refresh" Grid.Column="2" Grid.Row="1" Click="btn_Refresh_Click" Style="{StaticResource FlatButtonStyle}"></Button>
-
+        <Button Name="btn_Send" Content="Send Clipboard" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Click="btn_Send_Click" Style="{StaticResource FlatButtonStyle}"></Button>
+        
         <ListBox Name="listb_copy" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="3" FontSize="14">
             <ListBox.ContextMenu>
                 <ContextMenu>

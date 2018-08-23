@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -24,19 +25,24 @@ namespace OneCP
     {
         Settings set = new Settings();
         string file;
+        bool RunThread = true;
 
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        
+
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrEmpty(Properties.Settings.Default.Path)) { set.ShowDialog(); }
             file = Properties.Settings.Default.Path;
             RefreshListbox();
+
+            Thread th = new Thread(() => checkfile());
+            th.Start();
         }
+
 
         #region Context menu
         private void MenuItemCopy_Click(object sender, RoutedEventArgs e)
@@ -70,6 +76,50 @@ namespace OneCP
             RefreshListbox();
         }
 
+        private void btn_Settings_Click(object sender, RoutedEventArgs e)
+        {
+            set.Show();
+        }
+
+        private void btn_Exit_Click(object sender, RoutedEventArgs e)
+        {
+            RunThread = false;
+            Application.Current.Shutdown();
+        }
+        #endregion
+
+
+        #region Functions
+        private void checkfile()
+        {
+            DateTime LastModified_Old = File.GetLastWriteTime(file);
+            DateTime LastModified_New = LastModified_Old;
+
+            while (RunThread)
+            {
+                WaitStat(10);
+                LastModified_New = File.GetLastWriteTime(file);
+
+                if (LastModified_New > LastModified_Old)
+                {
+                    Dispatcher.Invoke(new Action(() => RefreshListbox()));
+                    LastModified_New = LastModified_Old;
+                }
+            }
+        }
+
+        private void WaitStat(int Halfsec)
+        {
+            int i = 0;
+
+            while (i < Halfsec)
+            {
+                Thread.Sleep(500);
+                i++;
+                if (!RunThread) { i = Halfsec; }
+            }
+        }
+
         private void RefreshListbox()
         {
             listb_copy.Items.Clear();
@@ -78,24 +128,6 @@ namespace OneCP
                 listb_copy.Items.Add(line);
             }
         }
-
-        private void btn_Settings_Click(object sender, RoutedEventArgs e)
-        {
-            set.Show();
-        }
-
-        private void btn_Exit_Click(object sender, RoutedEventArgs e)
-        {
-            Environment.Exit(0);
-        }
-        #endregion
-
-
-        #region Functions
-        private void btn_Refresh_Click(object sender, RoutedEventArgs e)
-        {
-            RefreshListbox();
-        }
-        #endregion
+        # endregion
     }
 }
